@@ -1,4 +1,4 @@
-# Template website undangan pernikahan sederhana
+# Template website undangan pernikahan sederhana edited by Hanapi, originally by DEWANAK1
 
 ![Thumbnail](/assets/images/banner.png)
 ![Thumbnail2](/assets/images/banner2.png)
