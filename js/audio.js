@@ -6,13 +6,12 @@ export const audio = (() => {
     const getAudio = () => {
         if (!audio) {
             audio = new Audio();
-            audio.src = music.getAttribute('data-url1');
-            audio.src = music.getAttribute('data-url2');
+            audio.src = music.getAttribute('data-url');
             audio.load();
             audio.currentTime = 0;
             audio.autoplay = true;
             audio.muted = false;
-            audio.loop = false;
+            audio.loop = true;
             audio.volume = 1;
         }
 
