@@ -1,6 +1,5 @@
 import { audio } from './audio.js';
 import { theme } from './theme.js';
-import { comment } from './comment.js';
 import { storage } from './storage.js';
 import { request, HTTP_GET } from './request.js';
 
