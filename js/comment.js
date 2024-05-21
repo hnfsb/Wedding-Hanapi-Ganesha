@@ -6,9 +6,9 @@ import { pagination } from './pagination.js';
 import { request, HTTP_GET, HTTP_POST, HTTP_DELETE, HTTP_PUT } from './request.js';
 
 export const comment = (() => {
-
     const owns = storage('owns');
     const session = storage('session');
+    let pendingComments = []; // Menyimpan komentar yang belum disetujui
 
     const remove = async (button) => {
         if (!confirm('Are you sure?')) {
@@ -144,7 +144,12 @@ export const comment = (() => {
             if (presence) {
                 presence.value = "0";
             }
-            comment();
+
+            // Tampilkan pesan konfirmasi dan tambahkan komentar ke pendingComments
+            alert('Komentar Anda telah diterima dan sedang menunggu persetujuan.');
+            pendingComments.push(response.data);
+
+            // Jangan panggil comment() untuk memuat ulang komentar
         }
     };
 
